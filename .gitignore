@@ -1,0 +1,31 @@
+# log files
+*.log
+
+# temporary files
+*.tmp
+*.temp
+*.bak
+
+# directories created by Ruby gems
+/.bundle/
+/vendor/
+Gemfile.lock
+
+# system files
+.DS_Store
+Thumbs.db
+
+# packages directory if you don't want to track downloaded tarballs
+/packages/
+
+# editor-specific files
+*.sublime-project
+*.sublime-workspace
+*.idea/
+*.vscode/
+*.swp
+*.swo
+
+# environment files
+.env
+.env.local
