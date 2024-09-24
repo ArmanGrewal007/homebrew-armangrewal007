@@ -7,7 +7,7 @@ class Armangrewal007 < Formula
   # depends_on "python@3.9"  # Specify the Python version 
 
   def install
-    system "pip3", "install", "--prefix=#{prefix}", "--upgrade", "armangrewal007"
+    system "pip", "install", "--prefix=#{prefix}", "--upgrade", "armangrewal007"
   end
 
   test do
