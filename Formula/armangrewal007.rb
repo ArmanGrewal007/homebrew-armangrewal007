@@ -1,6 +1,4 @@
 class Armangrewal007 < Formula
-  include Language::Python::Virtualenv
-
   desc "CLI to display Arman Singh Grewal's resume"
   homepage "https://github.com/yourusername/armangrewal007"
   url "https://files.pythonhosted.org/packages/source/a/armangrewal007/armangrewal007-0.1.2.tar.gz" 
@@ -9,8 +7,8 @@ class Armangrewal007 < Formula
   depends_on "python@3.10"  # Specify the Python version 
 
   def install
-    # system "pip", "install", "--prefix=#{prefix}", "--upgrade", "armangrewal007"
-    virtualenv_install_with_resources
+    system "pip", "install", "--prefix=#{prefix}", "--upgrade", "armangrewal007"
+    # virtualenv_install_with_resources
   end
 
   test do
