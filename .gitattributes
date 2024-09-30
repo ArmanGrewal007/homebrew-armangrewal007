@@ -1,2 +1,3 @@
 *.1 linguist-detectable=true
 *.1 linguist-documentation=false
+*.1 linguist-language=Roff
