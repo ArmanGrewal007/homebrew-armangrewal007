@@ -55,9 +55,10 @@ if user_input == 'y'
   # Update the formula file
   formula_file = "Formula/#{package_name}.rb"
   formula_content = File.read(formula_file)
-  updated_formula = formula_content.gsub(/f_url ".*"/, "f_url \"#{tarball_url}\"")
+  updated_formula = formula_content.gsub(/^  url ".*"/, "  url \"#{tarball_url}\"")
   updated_formula.gsub!(/version ".+"/, "version \"#{latest_version}\"")
-  updated_formula.gsub!(/f_sha256 ".*"/, "f_sha256 \"#{sha256}\"")
+  # Be very careful of the two whitespaces
+  updated_formula.gsub!(/^  sha256 ".*"/, "  sha256 \"#{sha256}\"")
 
   # Update the man page
   man_page_path = "man/man1/#{package_name}.1"
@@ -66,7 +67,8 @@ if user_input == 'y'
   File.write(man_page_path, updated_man_page_content)
   man_page_sha256 = `shasum -a 256 #{man_page_path}`.split.first
   puts "SHA256 (man page): #{man_page_sha256}"
-  updated_formula.gsub!(/m_sha256 ".*"/, "m_sha256 \"#{man_page_sha256}\"") if updated_formula =~ /resource "man_page"/
+  # Be very careful of the 4 whitespaces
+  updated_formula.gsub!(/^    sha256 ".*"/, "    sha256 \"#{man_page_sha256}\"") if updated_formula =~ /resource "man_page"/
 
   # Write to formula file
   File.write(formula_file, updated_formula)

@@ -1,13 +1,13 @@
 class Armangrewal007 < Formula
   desc "CLI to display Arman Singh Grewal's resume"
   homepage "https://github.com/yourusername/armangrewal007"
-  f_url "https://files.pythonhosted.org/packages/source/a/armangrewal007/armangrewal007-0.1.3.tar.gz"
-  f_sha256 "7e5ffcce261e9997a164c9c245832ad16e2aec9a7291040d0c2b3dc6ee16c992"
+  url "https://files.pythonhosted.org/packages/source/a/armangrewal007/armangrewal007-0.1.3.tar.gz"
+  sha256 "7e5ffcce261e9997a164c9c245832ad16e2aec9a7291040d0c2b3dc6ee16c992"
 
   depends_on "python@3.10"  # Specify the Python version 
   resource "man_page" do
-    m_url "https://raw.githubusercontent.com/ArmanGrewal007/homebrew-armangrewal007/refs/heads/master/man/man1/armangrewal007.1"
-    m_sha256 "2e7e6c9a9ada1e8ea362cf140900ab68305efa9b64697cbfe30f81b64f26b5c8"
+    url "https://raw.githubusercontent.com/ArmanGrewal007/homebrew-armangrewal007/refs/heads/master/man/man1/armangrewal007.1"
+    sha256 "2e7e6c9a9ada1e8ea362cf140900ab68305efa9b64697cbfe30f81b64f26b5c8"
   end
 
   def install
