@@ -5,11 +5,17 @@ class Armangrewal007 < Formula
   sha256 "7e5ffcce261e9997a164c9c245832ad16e2aec9a7291040d0c2b3dc6ee16c992" 
 
   depends_on "python@3.10"  # Specify the Python version 
+  resource "man_page" do
+    url "https://raw.githubusercontent.com/armangrewal007/homebrew-armangrewal007/main/man/man1/armangrewal007.1"
+    sha256 "insert_correct_sha256_here"
+  end
 
   def install
     system "pip", "install", "--prefix=#{prefix}", "--upgrade", "armangrewal007"
     # virtualenv_install_with_resources
-    man1.install "man/man1/armangrewal007.1"
+    resource("man_page").stage do
+      man1.install "armangrewal007.1"
+    end
   end
 
   test do
