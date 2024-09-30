@@ -9,6 +9,7 @@ class Armangrewal007 < Formula
   def install
     system "pip", "install", "--prefix=#{prefix}", "--upgrade", "armangrewal007"
     # virtualenv_install_with_resources
+    man1.install "man/man1/armangrewal007.1"
   end
 
   test do
