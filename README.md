@@ -1,4 +1,10 @@
-# Steps to install
+<div align="center">
+  <h1>armangrewal007</h1>
+  <img src="armangrewal007-brew-v0.1.3.gif" /> <br>
+  (This GIF demonstrates version <code>v0.1.3</code>)
+</div>
+
+## Steps to install
 
 1. `brew tap armangrewal007/homebrew-armangrewal007`
 2. `brew install armangrewal007`
