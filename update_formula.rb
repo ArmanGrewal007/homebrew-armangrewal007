@@ -1,6 +1,13 @@
 require 'net/http'
 require 'json'
 
+# Author: Arman Grewal
+########################################################
+# Ruby script to automatically fetch the latest version 
+# from PyPI and update man page and formula.rb with new 
+# versions and shasums
+########################################################
+
 # ANSI escape codes for text colors
 BLUE = "\e[34m"
 RESET = "\e[0m"
